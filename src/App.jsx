@@ -16,7 +16,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/dentist/:id" element={<DentistDetail />} />
         <Route path="/favs" element={<Favorites />} />
-      </Routes>
+        </Routes>
       <Footer />
     </Router>
   );
