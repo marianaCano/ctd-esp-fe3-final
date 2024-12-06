@@ -1,13 +1,11 @@
 import React, { createContext, useReducer, useContext } from "react";
 
-// Estado inicial
 const initialState = {
   theme: "light",
   dentists: [],
   favorites: [],
 };
 
-// Reducer
 const reducer = (state, action) => {
   switch (action.type) {
     case "SET_THEME":
@@ -26,10 +24,8 @@ const reducer = (state, action) => {
   }
 };
 
-// Contexto
 export const GlobalContext = createContext();
 
-// Proveedor del contexto
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 

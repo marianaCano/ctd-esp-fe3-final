@@ -6,7 +6,6 @@ const Home = () => {
   const { state, dispatch } = useContext(GlobalContext);
 
   useEffect(() => {
-    // Fetch para obtener la lista de dentistas
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((data) => dispatch({ type: "SET_DENTISTS", payload: data }))

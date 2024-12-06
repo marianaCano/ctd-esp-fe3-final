@@ -1,8 +1,7 @@
 import React from 'react';
-import { useTheme } from '../Components/utils/global.context'; // Ajusta la ruta según tu estructura
-
+import { useTheme } from '../Components/utils/global.context'; 
 const Navbar = () => {
-  const { theme, toggleTheme } = useTheme(); // Accede al tema y a la función para cambiarlo
+  const { theme, toggleTheme } = useTheme(); 
 
   return (
     <nav className={theme}> {/* Aplica el tema como clase */}
@@ -10,6 +9,8 @@ const Navbar = () => {
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li>
+        <li><a href="/favs">Favorites</a></li>
+
       </ul>
       <button onClick={toggleTheme}>Change theme</button>
     </nav>

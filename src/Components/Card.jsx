@@ -1,16 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Para redirigir al detalle del dentista
+import { Link } from "react-router-dom"; 
 
 const Card = ({ name, username, id }) => {
-  // Función para agregar al localStorage
+ 
   const addFav = () => {
-    const existingFavs = JSON.parse(localStorage.getItem("favs")) || []; // Obtiene los favoritos actuales
-    const newFav = { id, name, username }; // Crea un objeto con los datos de la Card
-
-    // Verifica si ya está en favoritos
+    const existingFavs = JSON.parse(localStorage.getItem("favs")) || []; 
+    const newFav = { id, name, username }; 
     if (!existingFavs.some(fav => fav.id === id)) {
-      const updatedFavs = [...existingFavs, newFav]; // Agrega el nuevo favorito
-      localStorage.setItem("favs", JSON.stringify(updatedFavs)); // Guarda en localStorage
+      const updatedFavs = [...existingFavs, newFav]; 
+      localStorage.setItem("favs", JSON.stringify(updatedFavs)); 
       alert(`${name} fue agregado a tus favoritos!`);
     } else {
       alert(`${name} ya está en tus favoritos.`);
