@@ -190,4 +190,14 @@ th {
 .favs .card:hover {
   border-color: #8c8c8c;
 }
+/* Estilos para el tema claro */
+body.light {
+  background-color: #fff;
+  color: #000;
+}
 
+/* Estilos para el tema oscuro */
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
